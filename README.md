@@ -34,16 +34,17 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 Dependencies used:
-pandas
-requests
-beautifulsoup4
-google-generativeai
-python-dotenv
+- pandas
+- requests
+- beautifulsoup4
+- google-generativeai
+- python-dotenv
 
 ### 3.Configure Environment Variables
 Create a .env file in the project root and add:
-`GEMINI_API_KEY=your_api_key_here`
-
+```.env
+GEMINI_API_KEY=your_api_key_here`
+```
 ## Part A — Data Cleaning & Automation
 Files:
 data_cleaning.py, pipeline.py, data/messy_input.csv
@@ -51,54 +52,54 @@ Run:
 ```bash
 python pipeline.py
 ```
-###Description
+### Description
 - Reads messy CSV input data
 - Validates each record using defined rules
 - Separates valid and unreliable records
 - Assigns a quality tag (High / Medium / Low)
 - Writes cleaned and rejected data to the output/ directory
 
-###Validation Rules
+### Validation Rules
 - Name must not be empty
 - Email must match a regex pattern
 - Age must be between 18 and 60
 - Score must be between 0 and 100
 
-###Outputs
+### Outputs
 - `output/cleaned_data.csv`
 - `output/unreliable_data.csv`
 
-##Assumptions
+## Assumptions
 - Invalid records are excluded rather than corrected
 - Missing or malformed values are treated as data errors
 - No data imputation is performed
 
-##Part B — Web Data Extraction & AI Summarization
+## Part B — Web Data Extraction & AI Summarization
 
-###Description
+### Description
 - Reads URLs from data/sources.txt
 - Fetches and parses web pages
 - Extracts page title and first meaningful paragraph
 - Summarizes extracted content using Gemini AI
 - Generates a final automated report
 
-###Outputs
+### Outputs
 - `output/extracted_info.json`
 - `output/final_report.txt`
 
-###Notes
+### Notes
 - Only publicly accessible web pages are used
 - Timeout and error handling are implemented
 - Failure of one URL does not stop the pipeline
 - AI summarization depends on Gemini API availability
 
-##Design Choices
+## Design Choices
 - Modular file structure for clarity and maintainability
 - Regex-based email validation for accuracy
 - Defensive programming to prevent pipeline failures
 - Environment variables used for secure API handling
 
-##Limitations
+## Limitations
 - Web scraping is basic and text-focused
 - No advanced logging or unit tests included
 - AI-generated summaries depend on external API responses
