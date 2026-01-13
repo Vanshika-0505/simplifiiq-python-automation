@@ -1,0 +1,10 @@
+Reflection on the Assignment
+
+Difficulties Faced:
+The data cleaning and validation part of the assignment was straightforward for me, and I did not face major difficulties while implementing it. The main challenges arose during web data extraction and AI API integration. While working with the Gemini API, I faced issues related to deprecated libraries, model availability, and environment variable configuration, especially on a Windows system. Additionally, during web scraping, some websites returned JavaScript notice content instead of meaningful information, which required additional filtering logic.
+
+Debugging Approach:
+To debug issues, I carefully analyzed error messages and stack traces to identify the root cause. I tested each module independently to ensure that data cleaning, web fetching, and summarization worked correctly in isolation. For API-related problems, I verified environment variables, reviewed official documentation, and adjusted the SDK and model configuration accordingly. I also ensured proper error handling so that failures in external services did not break the entire automation pipeline.
+
+Improvements and Learnings:
+This assignment helped me gain practical experience in building a structured automation pipeline and handling real-world issues beyond core logic. I learned how to design modular Python code, handle unreliable external dependencies, and integrate an AI API securely using environment variables. If given more time, I would improve logging, add automated tests, and further refine content extraction rules. Overall, this task strengthened my confidence in debugging and building end-to-end automation systems.
