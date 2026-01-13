@@ -42,7 +42,7 @@ python-dotenv
 
 ### 3.Configure Environment Variables
 Create a .env file in the project root and add:
-GEMINI_API_KEY=your_api_key_here
+`GEMINI_API_KEY=your_api_key_here`
 
 ## Part A — Data Cleaning & Automation
 Files:
