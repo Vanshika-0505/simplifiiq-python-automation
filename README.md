@@ -26,12 +26,13 @@ It demonstrates data cleaning, web data extraction, and AI-based summarization u
 ### 1. Create a Python Virtual Environment 
 ```bash
 python -m venv venv
-venv\Scripts\activate           
+venv\Scripts\activate
+```         
 
 ### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
-
+```
 Dependencies used:
 pandas
 requests
@@ -49,7 +50,7 @@ data_cleaning.py, pipeline.py, data/messy_input.csv
 Run:
 ```bash
 python pipeline.py
-
+```
 ###Description
 - Reads messy CSV input data
 - Validates each record using defined rules
@@ -64,8 +65,8 @@ python pipeline.py
 - Score must be between 0 and 100
 
 ###Outputs
-- output/cleaned_data.csv
-- output/unreliable_data.csv
+- `output/cleaned_data.csv`
+- `output/unreliable_data.csv`
 
 ##Assumptions
 - Invalid records are excluded rather than corrected
@@ -82,8 +83,8 @@ python pipeline.py
 - Generates a final automated report
 
 ###Outputs
-- output/extracted_info.json
-- output/final_report.txt
+- `output/extracted_info.json`
+- `output/final_report.txt`
 
 ###Notes
 - Only publicly accessible web pages are used
